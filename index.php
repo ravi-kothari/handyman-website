@@ -66,7 +66,7 @@ require_once __DIR__ . '/config.php';
           "name": "West Sacramento"
         }
       ],
-      "url": "https://www.cjsallinonehandyman.com"
+      "url": "https://cjhandyman916.com"
     }
     </script>
 </head>
@@ -281,10 +281,15 @@ require_once __DIR__ . '/config.php';
         <div class="container">
             <div class="about-wrapper">
                 <div class="about-image-column">
-                    <div class="about-photo-placeholder">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <p>CJ's Photo Placeholder</p>
-                        <span>Replace with a photo of CJ (500x600px recommended)</span>
+                    <div class="about-image-card">
+                        <img src="assets/cesar.jpg" alt="Cesar (CJ) - Owner and Handyman at CJ's All In One Handyman Services" class="about-photo">
+                        <div class="about-image-badge">
+                            <div class="badge-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="badge-text">
+                                <strong>Cesar "CJ"</strong>
+                                <span>Owner & Lead Handyman</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="about-text-column">

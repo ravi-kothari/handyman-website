@@ -64,8 +64,25 @@ if ($response) {
             $id = $file['id'];
             $name = pathinfo($file['name'], PATHINFO_FILENAME);
             
-            // Format name to be readable (replace hyphens/underscores with spaces, capitalize)
-            $label = ucwords(str_replace(['-', '_'], ' ', $name));
+            // Check if name is a generic camera/upload name
+            $is_generic = false;
+            $lower_name = strtolower($name);
+            if (
+                strpos($lower_name, 'whatsapp') !== false ||
+                strpos($lower_name, 'screenshot') !== false ||
+                preg_match('/^(img|pxl|dsc|dscn|image|photo)[-_]?\d+/', $lower_name) ||
+                preg_match('/^\d+$/', $lower_name) ||
+                preg_match('/^[a-f0-9\-]{36}$/i', $lower_name)
+            ) {
+                $is_generic = true;
+            }
+            
+            if ($is_generic) {
+                $label = 'Recent Project';
+            } else {
+                // Format name to be readable (replace hyphens/underscores with spaces, capitalize)
+                $label = ucwords(str_replace(['-', '_'], ' ', $name));
+            }
             
             // We use Google's content delivery servers to fetch images at custom sizes efficiently
             $images[] = [
@@ -107,7 +124,9 @@ function make_http_request($url) {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         $output = curl_exec($ch);
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        if (PHP_VERSION_ID < 80000) {
+            curl_close($ch);
+        }
         
         if ($http_code === 200) {
             return $output;
