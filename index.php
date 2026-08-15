@@ -30,7 +30,7 @@ require_once __DIR__ . '/config.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2.2">
     
     <!-- Local Business Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
