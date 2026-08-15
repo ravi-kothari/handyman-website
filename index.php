@@ -30,7 +30,7 @@ require_once __DIR__ . '/config.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=2.2">
+    <link rel="stylesheet" href="style.css?v=2.3">
     
     <!-- Local Business Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
@@ -283,13 +283,6 @@ require_once __DIR__ . '/config.php';
                 <div class="about-image-column">
                     <div class="about-image-card">
                         <img src="assets/cesar.jpg" alt="Cesar (CJ) - Owner and Handyman at CJ's All In One Handyman Services" class="about-photo">
-                        <div class="about-image-badge">
-                            <div class="badge-icon"><i class="fa-solid fa-circle-check"></i></div>
-                            <div class="badge-text">
-                                <strong>Cesar "CJ"</strong>
-                                <span>Owner & Lead Handyman</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="about-text-column">
